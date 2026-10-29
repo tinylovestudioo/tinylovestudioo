@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tiny Love Studio – Write a vintage letter with a bouquet</title><meta name="description" content="Write a vintage love letter with a blooming bouquet and send it as a link."><meta property="og:title" content="Tiny Love Studio"><meta property="og:description" content="Someone wrote you a letter. Tap the envelope to open it."><meta name="theme-color" content="#b5485d"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&family=Parisienne&family=Sacramento&family=Satisfy&family=Pacifico&family=Caveat:wght@500;700&family=Playfair+Display:ital,wght@0,500;1,500&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Allura&family=Alex+Brush&family=Tangerine:wght@700&family=Courgette&family=Marck+Script&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6ece4;--pn:#fffaf5;--ink:#3b2230;--mu:#8a6b78;--ro:#b5485d;--ln:#ead9cc;--env:#c9505f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1520;--pn:#2b1d29;--ink:#f6e8ea;--mu:#c6a3b0;--ln:#473341}}
+:root[data-theme="dark"]{--bg:#1f1520;--pn:#2b1d29;--ink:#f6e8ea;--mu:#c6a3b0;--ln:#473341}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Lora,Georgia,serif}
+header{display:flex;align-items:center;gap:10px;padding:10px 18px;border-bottom:1px solid var(--ln);flex-wrap:wrap}
+.logo{font:34px 'Great Vibes',cursive;color:var(--ro);margin-right:auto}
+button{font:inherit;cursor:pointer;border:1px solid var(--ln);background:var(--pn);color:var(--ink);border-radius:999px;padding:7px 14px}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--ro);outline-offset:2px}
+.pri{background:var(--ro);color:#fff;border-color:var(--ro)}
+.rc{display:none}.recv .rc{display:inline-block}.recv .ed,.recv #panel{display:none}
+main{display:grid;grid-template-columns:minmax(300px,380px) 1fr;min-height:calc(100vh - 64px)}
+#panel{order:-1;background:var(--pn);border-right:1px solid var(--ln);padding:14px}
+.recv main{grid-template-columns:1fr}
+@media(max-width:820px){main{grid-template-columns:1fr}#panel{order:0;border:0;border-top:1px solid var(--ln)}}
+.tabs,.row{display:flex;flex-wrap:wrap;gap:6px}.tabs{margin-bottom:6px}
+label{display:block;font-size:13px;color:var(--mu);margin:12px 0 5px}
+input[type=text],textarea,select{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--ln);border-radius:10px;background:var(--bg);color:var(--ink)}
+textarea{min-height:140px;resize:vertical}input[type=range]{width:100%;accent-color:var(--ro)}
+input[type=color]{width:34px;height:28px;padding:0;border:0;background:none;vertical-align:middle}
+.sw{width:30px;height:30px;border-radius:50%;padding:0;border:2px solid var(--pn);box-shadow:0 0 0 1px var(--ln)}.sw.on{box-shadow:0 0 0 2px var(--ro)}
+.chip{padding:5px 12px;font-size:14px}.chip.on{background:var(--ro);color:#fff;border-color:var(--ro)}
+.em{padding:1px 5px;font-size:22px;border:0;background:none}
+#stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:26px 12px 48px;background:radial-gradient(ellipse at 50% 0,rgba(201,80,95,.14),transparent 62%),repeating-linear-gradient(45deg,transparent 0 14px,rgba(185,143,62,.06) 14px 15px)}
+.hi{font:44px 'Great Vibes',cursive;color:var(--ro);margin:0;text-align:center}
+.hint{color:var(--mu);font-style:italic;margin:0}
+.book{display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:center}
+.paper{width:min(92vw,520px);padding:42px 38px;border-radius:4px;position:relative;line-height:1.35;background:var(--pb);color:var(--pi);transform:rotate(-.6deg);box-shadow:0 18px 40px rgba(60,30,20,.3),inset 0 0 70px rgba(120,80,30,.3)}
+.paper::before{content:"";position:absolute;inset:12px;border:3px double var(--pe);pointer-events:none}
+.paper::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 18% 14%,rgba(150,100,40,.14),transparent 30%),radial-gradient(circle at 86% 82%,rgba(150,100,40,.16),transparent 36%)}
+.f-dotted::before{border-style:dotted!important;border-width:2px!important}.f-none::before{display:none}
+.paper div{white-space:pre-wrap;overflow-wrap:anywhere;position:relative;z-index:1}.paper .body{margin:16px 0}
+.bq svg{width:min(80vw,300px);height:auto;filter:drop-shadow(0 12px 14px rgba(0,0,0,.28))}
+.rise{animation:rise .9s ease-out}@keyframes rise{from{opacity:0;transform:translateY(50px) scale(.93)}}
+.envw{position:relative;width:min(88vw,420px);aspect-ratio:1.5;margin-top:70px;cursor:pointer}
+.envw>*{position:absolute}
+.back{inset:0;background:var(--env);border-radius:6px;box-shadow:0 18px 36px rgba(0,0,0,.3)}
+.let{left:6%;right:6%;top:6%;bottom:6%;background:var(--pb);color:var(--pi);display:flex;align-items:center;justify-content:center;text-align:center;font:28px 'Great Vibes',cursive;transition:transform .9s .55s;z-index:1;border-radius:3px;padding:8px}
+.pk{inset:0;background:color-mix(in srgb,var(--env) 82%,#000);clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%);border-radius:6px;z-index:2}
+.flap{left:0;right:0;top:0;height:55%;background:color-mix(in srgb,var(--env) 90%,#fff);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .7s,z-index 0s .35s;z-index:3}
+.seal{left:50%;top:50%;width:54px;height:54px;margin:-27px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;z-index:4;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--sl,#a3262f) 70%,#fff),var(--sl,#a3262f));box-shadow:0 3px 8px rgba(0,0,0,.4);transition:opacity .3s}
+.open .flap{transform:rotateX(180deg);z-index:0}.open .let{transform:translateY(-55%)}.open .seal{opacity:0}
+dialog{border:1px solid var(--ln);border-radius:16px;background:var(--pn);color:var(--ink);width:min(92vw,460px);padding:20px}
+dialog::backdrop{background:rgba(30,10,20,.55)}dialog h2{margin:0 0 8px;font:30px 'Great Vibes',cursive;color:var(--ro)}dialog input{margin:8px 0}
+.li{display:flex;justify-content:space-between;align-items:center;margin:8px 0}.mu{color:var(--mu);font-size:13px}
+header{background:color-mix(in srgb,var(--pn) 82%,transparent);backdrop-filter:blur(8px)}.logo small{display:block;font:italic 12px Lora,serif;color:var(--mu);margin-top:-8px}#panel{position:relative;z-index:3;box-shadow:6px 0 30px rgba(120,60,70,.1)}.hint{color:inherit;opacity:.75}.hi{animation:fi 1.6s}.paper{background-color:var(--pb);background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.8%22 numOctaves=%223%22/%3E%3CfeColorMatrix values=%220 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .12 0 0 0 .3 0%22/%3E%3C/filter%3E%3Crect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')}.paper.rise div{animation:fi 1.3s .8s backwards}@keyframes fi{from{opacity:0;filter:blur(5px)}}.f-dashed::before{border-style:dashed!important;border-width:2px!important}.f-ornate::before{border-width:4px!important}.cn{position:absolute;color:var(--pe);font-size:24px;font-style:normal;z-index:1}.dc{text-align:center;letter-spacing:.3em;margin-bottom:6px}.dt{text-align:right;font-size:.65em;opacity:.8;margin-bottom:8px}.bq svg{transform-origin:50% 96%;animation:bob 7s ease-in-out infinite}@keyframes bob{0%,100%{transform:rotate(-1.8deg)}50%{transform:rotate(1.8deg)}}.bl .fw{animation:bloom .9s backwards cubic-bezier(.3,1.7,.5,1)}@keyframes bloom{from{transform:scale(0) rotate(-120deg)}}.envw:not(.open){animation:flt 4s ease-in-out infinite}@keyframes flt{50%{transform:translateY(-10px)}}.envw:not(.open):hover .flap{transform:rotateX(18deg)}.envw:not(.open) .seal{animation:pls 1.8s ease-in-out infinite}@keyframes pls{50%{transform:scale(1.14);box-shadow:0 0 20px rgba(255,120,120,.85)}}#fxl{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:2}.fp{position:absolute;top:-40px;opacity:.85;animation:fall linear infinite}@keyframes fall{to{transform:translate(var(--dx),115vh) rotate(300deg)}}.bs{position:fixed;animation:bst 1.8s ease-out forwards}@keyframes bst{to{transform:translate(var(--dx),var(--dy)) scale(1.5) rotate(40deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head>
+<body>
+<header><span class="logo">✿ Tiny Love Studio<small>Love letters that bloom</small></span><button class="ed" id="mine">My letters</button><button class="ed pri" id="share">Create share link</button><button class="rc pri" id="own">Write one for someone you love</button></header>
+<main><section id="stage"></section><aside id="panel"></aside></main>
+<dialog id="dlg"></dialog><div id="fxl" aria-hidden="true"></div>
+<script>
+const BASE='';
+const $=s=>document.querySelector(s),clone=o=>JSON.parse(JSON.stringify(o)),dlg=$('#dlg');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const TH={Parchment:{bg:'#f1e2bd',ink:'#4a2c1a',edge:'#b08a4a'},Rose:{bg:'#f8dbe0',ink:'#6b2237',edge:'#c26a7b'},Sage:{bg:'#dfe8d3',ink:'#2f4a35',edge:'#7d9a76'},Ivory:{bg:'#fbf6ea',ink:'#3a2f4a',edge:'#cdb98a'},Midnight:{bg:'#2a2238',ink:'#f3e2b8',edge:'#d4b36a'},Blush:{bg:'#fde8e4',ink:'#7a2c3a',edge:'#e0a0a0'},Lavender:{bg:'#e6dcf2',ink:'#3f2a5c',edge:'#9a82c4'},Sky:{bg:'#dcebf5',ink:'#1f3b5c',edge:'#7aa3c7'}};
+const FONTS=['Great Vibes','Dancing Script','Parisienne','Sacramento','Satisfy','Pacifico','Caveat','Playfair Display','Cormorant Garamond','Lora','Allura','Alex Brush','Tangerine','Courgette','Marck Script'];
+const FR=['classic','dotted','dashed','ornate','none'],INK=['#4a2c1a','#6b2237','#2f4a35','#1f2a5a','#111111','#8a1c3a','#f3e2b8'],WR=['#f3d1da','#fff3d6','#cfe3d0','#d9d2ee','#c9505f','#2f3b52'],EN=['#c9505f','#9b6b8e','#4e7a67','#c79a46','#3f5b8c','#e8a5b3'],SE=['❤️','🌹','💌','🦋','✨','🕊️'];
+const EM=['❤️','💖','💕','🌹','🌷','🌸','🌺','🌻','💐','🦋','✨','🕊️','💌','😘','🥰','😊','🌙','⭐','🎀','🥂','🤗','💍','🫶','🍫'];
+const AL=['left','center','right'],DC=['','🌸 ❦ 🌸','💕 ✿ 💕','🌹 ❧ 🌹','✨ 🕊️ ✨','🦋 ❀ 🦋'],LF=['#5d8a56','#3f7a5a','#7a9a45','#2f5d4a'],RB=['#c0394d','#d4a84b','#ffffff','#5b3a8c','#2f6b8c'],SCL=['#a3262f','#2f5d8c','#2f6b4f','#b8862b','#5b3a8c'];
+const SC={Garden:['radial-gradient(ellipse at 50% 0,rgba(201,80,95,.18),transparent 60%),linear-gradient(#fbeee8,#f2dcdd)','#3b2230'],Sunset:['linear-gradient(#ffd9a8,#ffaeb5 55%,#d98bb0)','#3b2230'],Mint:['linear-gradient(#e9f6ee,#cbe5d9)','#24402f'],Dusk:['radial-gradient(circle at 50% 0,#7a559c,transparent 70%),linear-gradient(#2a1f3d,#4a2a4f)','#f6e8ea'],Midnight:['radial-gradient(circle at 20% 10%,#2b3a67,transparent 60%),linear-gradient(#0f1226,#1b1f3b)','#f6e8ea']};
+const FXS={Petals:['🌸','🌺','🌷','🌼'],Hearts:['💗','💖','❤️','💕'],Sparkles:['✨','⭐','🌟'],Butterflies:['🦋'],Off:[]};
+const dk=(c,w)=>`color-mix(in srgb,${c} ${w}%,#000)`,lt=(c,w)=>`color-mix(in srgb,${c} ${w}%,#fff)`;
+const P=(n,rx,ry,off,f,rot)=>[...Array(n)].map((_,i)=>`<ellipse cy="${-off}" rx="${rx}" ry="${ry}" transform="rotate(${i*360/n+rot})" style="fill:${f};stroke:rgba(0,0,0,.2);stroke-width:.8"/>`).join('');
+const FL={
+rose:c=>P(6,14,16,11,c,0)+P(5,10,12,7,dk(c,86),30)+P(4,6,8,3.5,dk(c,72),10)+`<circle r="2.5" style="fill:${dk(c,55)}"/>`,
+tulip:c=>`<g transform="translate(0 12)"><ellipse cx="-7" cy="-14" rx="9" ry="19" transform="rotate(-14 -7 -14)" style="fill:${dk(c,84)}"/><ellipse cx="7" cy="-14" rx="9" ry="19" transform="rotate(14 7 -14)" style="fill:${dk(c,84)}"/><ellipse cy="-16" rx="9" ry="21" style="fill:${c};stroke:rgba(0,0,0,.18)"/></g>`,
+daisy:c=>P(12,4,13,13,c,0)+`<circle r="7" style="fill:#f4c430"/>`,
+blossom:c=>P(5,11,12,11,c,0)+P(5,5,6,5,lt(c,60),36)+`<circle r="3" style="fill:#e8a428"/>`,
+sunflower:c=>P(16,4,13,15,c,0)+P(16,4,12,13,lt(c,85),11)+`<circle r="11" style="fill:#5b3a1e"/><circle r="6" style="fill:#3b2412"/>`,peony:c=>P(8,13,14,10,lt(c,90),0)+P(8,11,12,8,c,22)+P(6,8,9,5,dk(c,88),10)+P(5,5,6,2.5,dk(c,75),0),lily:c=>P(6,6,18,14,c,0)+P(6,3,14,10,lt(c,60),30)+`<circle r="3" style="fill:#f4c430"/>`,lavender:c=>`<g>${[...Array(7)].map((_,i)=>`<ellipse cx="${i%2?5:-5}" cy="${8-i*6}" rx="4" ry="6" style="fill:${i%3?c:lt(c,70)}"/>`).join('')}</g>`};
+const D={to:'My dearest Aanya,',msg:'Every morning I wake up grateful that you exist. Your smile is my favourite sunrise and your laughter is the song I never get tired of.\n\nThis little bouquet will never wither, just like what I feel for you. 🌹',from:'Forever yours,\nRahul',font:'Great Vibes',size:28,paper:'Parchment',color:'#4a2c1a',frame:'classic',fl:['rose','tulip','daisy','blossom'],fc:{rose:'#d6455f',tulip:'#ff8fa8',daisy:'#ffffff',blossom:'#ffb6c9',sunflower:'#f7b500',peony:'#f4a6c0',lily:'#fff4e0',lavender:'#9a7bd1'},n:9,sp:110,lf:'#5d8a56',rb:'#c0394d',sc:'#a3262f',align:'left',lh:1.4,deco:'🌸 ❦ 🌸',date:new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}),scene:'Garden',fx:'Petals',wrap:'#f3d1da',env:'#c9505f',seal:'❤️',note:'For my love 💌'};
+const hx=v=>typeof v=='string'&&/^#[0-9a-f]{6}$/i.test(v);
+function clean(o){const r=clone(D);if(!o||typeof o!='object')return r;
+['to','msg','from','note','seal','date','deco'].forEach(k=>{if(typeof o[k]=='string')r[k]=o[k].slice(0,3000)});
+if(FONTS.includes(o.font))r.font=o.font;if(TH[o.paper])r.paper=o.paper;if(FR.includes(o.frame))r.frame=o.frame;
+['color','env','wrap','lf','rb','sc'].forEach(k=>{if(hx(o[k]))r[k]=o[k]});
+r.size=Math.min(44,Math.max(16,+o.size||r.size));r.n=Math.min(11,Math.max(3,+o.n||r.n));r.sp=Math.min(140,Math.max(60,+o.sp||r.sp));r.lh=Math.min(2,Math.max(1.1,+o.lh||r.lh));if(AL.includes(o.align))r.align=o.align;if(SC[o.scene])r.scene=o.scene;if(FXS[o.fx])r.fx=o.fx;
+if(Array.isArray(o.fl)&&o.fl.some(t=>FL[t]))r.fl=o.fl.filter(t=>FL[t]);
+if(o.fc)for(const t in FL)if(hx(o.fc[t]))r.fc[t]=o.fc[t];return r}
+/* share-link encoding: letter -> deflate -> base64url, kept in the #hash */
+const b64=b=>btoa(String.fromCharCode(...b)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+const unb=s=>Uint8Array.from(atob(s.replace(/-/g,'+').replace(/_/g,'/')),c=>c.charCodeAt(0));
+async function enc(o){const d={};for(const k in o)if(JSON.stringify(o[k])!==JSON.stringify(D[k]))d[k]=o[k];const raw=new TextEncoder().encode(JSON.stringify(d));try{return 'z'+b64(new Uint8Array(await new Response(new Blob([raw]).stream().pipeThrough(new CompressionStream('deflate-raw'))).arrayBuffer()))}catch(e){return 'p'+b64(raw)}}
+async function dec(t){const raw=unb(t.slice(1));if(t[0]=='z')return JSON.parse(await new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).text());return JSON.parse(new TextDecoder().decode(raw))}
+const CN=()=>S.frame=='ornate'?['top:8px;left:10px','top:8px;right:10px;transform:scaleX(-1)','bottom:8px;left:10px;transform:scaleY(-1)','bottom:8px;right:10px;transform:scale(-1)'].map(s=>`<i class="cn" style="${s}">❦</i>`).join(''):'';
+let lastFx;
+function fx(){const a=FXS[S.fx];$('#fxl').innerHTML=a.length?[...Array(14)].map((_,i)=>`<span class="fp" style="left:${Math.random()*100}%;font-size:${12+Math.random()*16}px;animation-duration:${9+Math.random()*9}s;animation-delay:-${Math.random()*14}s;--dx:${Math.random()*160-80}px">${a[i%a.length]}</span>`).join(''):''}
+function burst(el){const r=el.getBoundingClientRect(),a=FXS[S.fx=='Off'?'Hearts':S.fx];for(let i=0;i<16;i++){const s=document.createElement('span');s.className='bs';s.textContent=a[i%a.length];s.style.cssText=`left:${r.left+r.width/2}px;top:${r.top+r.height/3}px;--dx:${Math.random()*360-180}px;--dy:${-80-Math.random()*220}px;font-size:${16+Math.random()*14}px`;$('#fxl').appendChild(s);setTimeout(()=>s.remove(),2000)}}
+let S=clone(D),mode='edit',view='letter',tab='Write',fresh=false;
+const TABS=['Write','Style','Bouquet','Envelope','Scene'];
+function bouquet(){const ts=S.fl,n=S.n;let lv='',st='',fh='';
+for(let i=0;i<6;i++)lv+=`<ellipse cx="150" cy="205" rx="14" ry="50" transform="rotate(${-60+i*24} 150 300)" style="fill:${S.lf};stroke:${dk(S.lf,70)}"/>`;
+for(let i=0;i<n;i++){const a=(n<2?0:(i/(n-1)-.5)*S.sp)*Math.PI/180,R=i%2?100:138,x=150+Math.sin(a)*R,y=232-Math.cos(a)*R,t=ts[i%ts.length],s=i%3?.95:1.15;
+st+=`<path d="M150 318Q${150+(x-150)*.3} ${(318+y)/2} ${x} ${y}" stroke="#4f7a4a" stroke-width="4" fill="none"/>`;
+fh+=`<g transform="translate(${x} ${y}) scale(${s})"><g class="fw" style="animation-delay:${i*.12}s">${FL[t](S.fc[t])}</g></g>`}
+const rb=S.rb;
+return `<svg class="${fresh?'bl':''}" style="animation-delay:-${(Date.now()/1000%7).toFixed(2)}s" viewBox="0 0 300 350" role="img" aria-label="Bouquet of flowers">${lv}${st}${fh}<path d="M62 190L238 190L172 336L128 336Z" style="fill:${S.wrap};stroke:rgba(0,0,0,.2)"/><path d="M62 190L150 252L128 336Z" style="fill:rgba(255,255,255,.4)"/><path d="M238 190L150 252L172 336Z" style="fill:rgba(0,0,0,.09)"/><g transform="translate(150 256)" style="fill:${rb};stroke:${rb}"><path d="M-3 4L-16 34M3 4L16 34" stroke-width="5" fill="none"/><ellipse cx="-16" rx="16" ry="9" transform="rotate(-20 -16 0)"/><ellipse cx="16" rx="16" ry="9" transform="rotate(20 16 0)"/><circle r="6"/></g></svg>`}
+const paper=()=>`<div class="paper f-${S.frame}${fresh?' rise':''}" style="font-family:'${S.font}',cursive;font-size:${S.size}px;line-height:${S.lh};text-align:${S.align}">${CN()}${S.deco?`<div class="dc">${esc(S.deco)}</div>`:''}${S.date?`<div class="dt">${esc(S.date)}</div>`:''}<div>${esc(S.to)}</div><div class="body">${esc(S.msg)}</div><div>${esc(S.from)}</div></div>`;
+const envelope=()=>`<div class="envw" data-open><div class="back"></div><div class="let">${esc(S.note)}</div><div class="pk"></div><div class="flap"></div><div class="seal">${esc(S.seal)}</div></div><p class="hint">Tap the envelope to open it</p>`;
+function stage(){const T=TH[S.paper];$('#stage').style.cssText=`--env:${S.env};--pb:${T.bg};--pi:${S.color};--pe:${T.edge};--sl:${S.sc};background:${SC[S.scene][0]};color:${SC[S.scene][1]}`;if(lastFx!==S.fx){lastFx=S.fx;fx()}let h='';if(mode=='bad'){$('#stage').innerHTML='<h2 class="hi">This link looks incomplete</h2><p class="hint">The letter was cut off when the link was sent. Please ask the sender to send it again.</p>';return}
+if(mode=='edit')h+=`<div class="row">${[['letter','Letter view'],['env','Preview opening']].map(v=>`<button class="chip${view==v[0]?' on':''}" data-view="${v[0]}">${v[1]}</button>`).join('')}</div>`;
+if(view=='env')h+=(mode=='recv'?`<h2 class="hi">A letter is waiting for you</h2>`:'')+envelope();
+else h+=`<div class="book">${paper()}<div class="bq${fresh?' rise':''}">${bouquet()}</div></div>`+(mode=='recv'?`<button data-view="env">Close the envelope</button>`:'');
+$('#stage').innerHTML=h;fresh=false}
+const sw=(k,a)=>`<div class="row">${a.map(c=>`<button class="sw${S[k]==c?' on':''}" style="background:${c}" data-set="${k}" data-v="${c}" aria-label="${c}"></button>`).join('')}</div>`;
+const ch=(k,a)=>`<div class="row">${a.map(v=>`<button class="chip${S[k]==v?' on':''}" data-set="${k}" data-v="${v}">${v||'None'}</button>`).join('')}</div>`;
+function panel(){const T={
+Write:`<label>To</label><input type="text" data-k="to" value="${esc(S.to)}"><label>Your message</label><textarea data-k="msg">${esc(S.msg)}</textarea><label>Sign-off</label><textarea data-k="from" style="min-height:64px">${esc(S.from)}</textarea><label>Add an emoji</label><div class="row">${EM.map(e=>`<button class="em" data-em="${e}">${e}</button>`).join('')}</div>`,
+Style:`<label>Paper</label>${ch('paper',Object.keys(TH))}<label>Handwriting</label><select data-k="font">${FONTS.map(f=>`<option${f==S.font?' selected':''} style="font-family:'${f}'">${f}</option>`).join('')}</select><label>Text size</label><input type="range" min="16" max="44" data-k="size" value="${S.size}"><label>Ink colour</label>${sw('color',INK)}<div style="margin-top:6px">Custom <input type="color" data-k="color" value="${S.color}"></div><label>Line spacing</label><input type="range" min="1.1" max="2" step=".05" data-k="lh" value="${S.lh}"><label>Alignment</label>${ch('align',AL)}<label>Top decoration</label>${ch('deco',DC)}<label>Date</label><input type="text" data-k="date" value="${esc(S.date)}"><label>Border</label>${ch('frame',FR)}`,
+Bouquet:`<label>Flowers (pick a mix)</label><div class="row">${Object.keys(FL).map(t=>`<button class="chip${S.fl.includes(t)?' on':''}" data-tf="${t}">${t}</button>`).join('')}</div><label>Flower colours</label><div class="row">${S.fl.map(t=>`<span>${t} <input type="color" data-fc="${t}" value="${S.fc[t]}"></span>`).join('')}</div><label>How many flowers</label><input type="range" min="3" max="11" data-k="n" value="${S.n}"><label>Wrapping paper</label>${sw('wrap',WR)}<label>Ribbon</label>${sw('rb',RB)}<label>Leaf colour</label>${sw('lf',LF)}<label>Spread</label><input type="range" min="60" max="140" data-k="sp" value="${S.sp}">`,
+Envelope:`<label>Envelope colour</label>${sw('env',EN)}<label>Wax seal</label>${ch('seal',SE)}<label>Seal colour</label>${sw('sc',SCL)}<label>Note on the letter inside</label><input type="text" data-k="note" value="${esc(S.note)}">`,
+Scene:`<label>Backdrop</label>${ch('scene',Object.keys(SC))}<label>Falling effect</label>${ch('fx',Object.keys(FXS))}`};
+$('#panel').innerHTML=`<div class="tabs">${TABS.map(t=>`<button class="chip${t==tab?' on':''}" data-tab="${t}">${t}</button>`).join('')}</div>`+T[tab]}
+$('#panel').addEventListener('input',e=>{const t=e.target,d=t.dataset;if(d.fc)S.fc[d.fc]=t.value;else if(d.k)S[d.k]=t.type=='range'?+t.value:t.value;stage()});
+$('#panel').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset;
+if(d.tab)tab=d.tab;
+else if(d.set){S[d.set]=d.v;if(d.set=='paper')S.color=TH[d.v].ink}
+else if(d.tf){const i=S.fl.indexOf(d.tf);if(i<0)S.fl.push(d.tf);else if(S.fl.length>1)S.fl.splice(i,1)}
+else if(d.em){const a=$('[data-k=msg]');if(a){const p=a.selectionStart,q=a.selectionEnd;a.value=a.value.slice(0,p)+d.em+a.value.slice(q);S.msg=a.value;stage();a.focus();a.setSelectionRange(p+d.em.length,p+d.em.length)}return}
+else return;panel();stage()});
+$('#stage').addEventListener('click',e=>{const b=e.target.closest('[data-view],[data-open]');if(!b)return;
+if(b.dataset.view){view=b.dataset.view;fresh=view=='letter';stage()}
+else if(!b.classList.contains('open')){b.classList.add('open');burst(b);setTimeout(()=>{view='letter';fresh=true;stage()},1700)}});
+const LS={get(){try{return JSON.parse(localStorage.getItem('pi')||'[]')}catch(e){return[]}},set(v){try{localStorage.setItem('pi',JSON.stringify(v))}catch(e){}}};
+function mine(){const L=LS.get();dlg.innerHTML=`<h2>My letters</h2><p class="mu">Saved on this device, in this browser.</p><button class="pri" data-save>Save this letter</button>${L.map((l,i)=>`<div class="li"><span>${esc(l.S.to||'Untitled')}</span><span><button data-open="${i}">Open</button> <button data-del="${i}">Delete</button></span></div>`).join('')||'<p>No saved letters yet.</p>'}<p><button data-close>Close</button></p>`;if(!dlg.open)dlg.showModal()}
+$('#mine').onclick=mine;
+$('#share').onclick=async()=>{const t=await enc(S),b=BASE||location.href.split('#')[0],u=b+'#'+t,eu=b+'#e'+t;dlg.innerHTML=`<h2>Your letter is ready 💌</h2><p>Send this view-only link to your loved one. They will see a sealed envelope, tap it, and your letter and bouquet appear.</p><input type="text" id="lk" readonly value="${esc(u)}"><div class="row"><button class="pri" data-cp>Copy link</button><a href="https://wa.me/?text=${encodeURIComponent('I wrote a letter for you 💌 '+u)}" target="_blank" rel="noopener"><button type="button">Send on WhatsApp</button></a><button data-close>Close</button></div><p class="mu">Anyone with this link can read the letter, so share it only with the person it is meant for.</p><p>Your private edit link. Keep it to yourself and use it to change this letter later:</p><input type="text" readonly value="${esc(eu)}">`;dlg.showModal()};
+dlg.addEventListener('click',e=>{const d=e.target.closest('button')?.dataset;if(!d)return;const L=LS.get();
+if('close' in d)dlg.close();
+else if('save' in d){L.unshift({S:clone(S)});LS.set(L);mine()}
+else if('open' in d){S=clean(L[d.open].S);dlg.close();view='letter';panel();stage()}
+else if('del' in d){L.splice(d.del,1);LS.set(L);mine()}
+else if('cp' in d){const i=$('#lk');i.select();(navigator.clipboard?navigator.clipboard.writeText(i.value):Promise.reject()).catch(()=>document.execCommand('copy'));e.target.textContent='Copied ✓'}});
+$('#own').onclick=()=>{mode='edit';view='letter';fresh=true;S=clone(D);document.body.classList.remove('recv');panel();stage()};
+async function boot(){mode='edit';view='letter';fresh=true;document.body.classList.remove('recv');let h=location.hash.slice(1);const ed=h[0]=='e';if(ed)h=h.slice(1);document.body.classList.toggle('recv',h.length>6&&!ed);
+if(h.length>6)try{S=clean(await dec(h));if(ed)fresh=true;else{mode='recv';view='env'}}catch(e){S=clone(D);if(!ed)mode='bad'}
+panel();stage()}
+addEventListener('hashchange',boot);boot();
+</script></body></html>
